@@ -12,7 +12,6 @@ def is_transaction(line: str) -> bool:
 
     return match is not None
 
-
 def parse_transaction(line: str) -> dict:
 
     # parse date

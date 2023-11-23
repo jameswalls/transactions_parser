@@ -15,7 +15,6 @@ def is_transaction(line: str) -> bool:
 
 def parse_transaction(line: str) -> dict:
 
-    # parse date
     months_map = {
         'Enero': 1,
         'Febrero': 2,
@@ -67,7 +66,8 @@ def process_transactions(lines: List[str]) -> List[dict]:
 def get_transactions(pages) -> List[dict]:
 
     transactions = []
-    transaction_break_string = 'Resumen de Plan AMEX de Pagos Diferidos con Intereses y Meses sin Intereses'
+    transaction_break_string = 'Resumen de Plan AMEX de Pagos Diferidos con\
+            Intereses y Meses sin Intereses'
 
     for page in pages:
         page_text = page.extract_text()
